@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoVentureStudio - Assets Page</title>
+<link rel="stylesheet" href="AssetsPage.css">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+    <div class="studio-bar">
+        <div class="logo">NeoVentureStudio</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../MainPage/Main.html">Main</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="../AboutUs/AboutUs.html">About us</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search assets..." />
+        <button id="search-btn">🔍</button>
+</div>
+
+    </div>
+</header>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero-space">
+    <div class="hero-glow"></div> <!-- خلفية glow -->
+    <h1 class="hero-title">NeoVentureStudio</h1>
+    <p class="hero-subtitle">IF YOU CAN IMAGINE IT <br> YOU CAN BRING IT TO LIFE ! <br>THIS IS WHERE MIRACLES BEGIN !</p>
+    <button class="hero-btn" onclick="document.querySelector('#assets-grid').scrollIntoView({behavior:'smooth'})">See Assets</button>
+</section>
+
+<!-- ===== Assets Grid ===== -->
+<section id="assets-grid" class="games-grid">
+    <div class="game-card asset-card" style="background-image:url('game1.png')">
+        <span>Example Asset</span>
+        <span class="price">FREE</span>
+        <button>DOWNLOAD</button>
+    </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+    <p>&copy; 2025 NeoVentureStudio. All rights reserved.</p>
+</footer>
+
+<script src="AssetsPage.js"></script>
+</body>
+</html>
