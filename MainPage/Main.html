@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoVentureStudio - Game Store</title>
+<link rel="stylesheet" href="main.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+    <div class="studio-bar">
+        <div class="logo">NeoVentureStudio</div> <!-- Website logo -->
+        <nav class="nav-menu">
+            <ul>
+                <!-- Navigation menu items -->
+                <li><a href="../AssetsPage/AssetsPage.html">Assets</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="../AboutUs/AboutUs.html">About us</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <div class="search-box">
+            <input type="text" placeholder="Search for games..." />
+            <button class="search-btn">🔍</button>
+        </div>
+</div>
+    </div>
+</header>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero-space">
+    <div class="sky-bg">
+        <!-- Day and night background images -->
+        <img src="SkyDay.png" class="sky day" />
+        <img src="SkyNight.png" class="sky night" />
+    </div>
+    <!-- Decorative layers -->
+    <div class="particles"></div>
+    <div class="clouds"></div>
+    <div class="stars"></div>
+    <!-- Main hero text -->
+    <h1 class="glow-text">NeoVentureStudio</h1>
+    <p class="glow-text">ENTER TO YOUR NEW ADVENTURE ! <br> AND PLAY THE IMPOSSIBLE ! </p>
+    <button class="hero-btn" onclick="document.querySelector('#games-grid').scrollIntoView({behavior: 'smooth'})">See our Games</button>
+
+</section>
+
+<!-- ===== Games Grid ===== -->
+<section id = "games-grid" class="games-grid">
+    <!-- Individual game cards -->
+    <div class="game-card" style="background-image:url('game1.png')">
+        <span>Coming Soon</span>
+        <span class="price">FREE</span>
+        <button>DOWNLOAD</button>
+    </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+    <p>&copy; 2025 NeoVentureStudio. All rights reserved.</p>
+</footer>
+
+<script src="main.js"></script> <!-- Link to external JS file -->
+</body>
+</html>

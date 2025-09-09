@@ -1,0 +1,233 @@
+/* ===== Reset ===== */
+/* Reset margin, padding and set box-sizing to border-box for all elements to make layouts predictable */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Arial', sans-serif; /* Set default font */
+    transition: background 6s ease, color 6s ease; /* Smooth transition for background and text color changes */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* ===== Header / Studio Bar ===== */
+.studio-bar {
+    display: flex; /* Flex layout for header elements */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Vertical center alignment */
+    padding: 2% 5%; /* Responsive padding */
+    color: #fff; /* Default text color */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Subtle text shadow for readability */
+    --bar-gradient: linear-gradient(90deg,#4fc3f7,#0288d1); /* Custom CSS variable for gradient */
+    background: var(--bar-gradient); /* Apply gradient */
+    transition: background 1s linear; /* Smooth background transition */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.logo { font-size: 2rem; font-weight: bold; } /* Logo styling */
+
+.nav-menu ul {
+    list-style: none; /* Remove default bullets */
+    display: flex; /* Horizontal menu */
+    gap: 25px; /* Space between menu items */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.nav-menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Link color */
+    font-weight: 600;
+    padding: 16px 30px;
+    border-radius: 5px; /* Rounded buttons for menu items */
+    transition: 0.3s; /* Smooth hover effect */
+}
+
+.nav-menu ul li a:hover { background: rgba(255,255,255,0.2); } /* Hover effect */
+
+/* ===== Search & Profile Buttons ===== */
+.search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box { display: flex; align-items: center; gap: 5px; }
+
+.search-box input {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none; /* Remove default border */
+    outline: none; /* Remove focus outline */
+    width: 200px;
+    max-width: 100%;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #81d4fa;
+    color: #003366;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover { transform: translateY(-2px); } /* Hover animation */
+html {
+  scroll-behavior: smooth; 
+}
+
+/* ===== Hero Section ===== */
+.hero-space {
+    height: 80vh; /* Takes most of the viewport height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Prevent elements from overflowing */
+}
+
+.sky-bg { position: absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; }
+.sky-bg img.sky {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; /* Cover the area without distortion */
+    transition: opacity 10s linear; /* Smooth day/night transition */
+}
+.sky-bg img.day { opacity:1; z-index:1; }
+.sky-bg img.night { opacity:0; z-index:2; }
+
+/* Glow Text */
+.glow-text {
+    position: relative;
+    z-index: 2;
+    font-size: 4vw; /* Responsive font size */
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #0288d1, 0 0 20px #03a9f4, 0 0 30px #81d4fa;
+    transition: text-shadow 6s ease;
+}
+
+.hero-space p.glow-text {
+    font-size: 1.5vw;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px #0288d1, 0 0 16px #03a9f4;
+}
+
+.hero-btn {
+    position: relative;
+    z-index: 2;
+    padding: 2vh 5vw;
+    font-size: 2rem;
+    background: #0288d1;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s, box-shadow 6s ease;
+}
+
+
+.hero-btn:hover { transform: translateY(-5px); box-shadow:0 5px 20px rgba(2,136,209,0.5); }
+
+.games-grid {
+    display: grid; /* Use CSS grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Responsive columns: each card min 160px */
+    gap: 150px; /* Space between cards */
+    padding: 100px; /* Padding around the grid */
+    justify-items: center; /* Center each card inside its grid cell */
+}
+
+.game-card {
+    width: 320px;    /* Fixed card width */
+    height: 400px;   /* Fixed card height */
+    border-radius: 15px; /* Rounded corners */
+    display: flex; 
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-end; /* Push content to the bottom */
+    align-items: center; /* Center content horizontally */
+    padding: 10px; /* Inner spacing */
+    color: #003366; /* Default text color */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Show pointer on hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation for hover effects */
+    position: relative; /* Needed for absolute positioning inside card */
+    overflow: hidden; /* Hide anything overflowing */
+    background-size: cover; /* Background image covers the card */
+    background-position: center; /* Center background image */
+    background-color: #e0f7fa; /* Fallback background color */
+}
+
+.game-card span {
+    background: rgba(3,169,244,0.7); /* Semi-transparent background */
+    padding: 5px 10px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 5px; /* Space below text */
+    text-align: center; /* Center text */
+    font-size: 12px; /* Text size */
+    color: #fff; /* White text */
+}
+
+.game-card .price { 
+    font-size: 11px; /* Smaller text for price */
+    margin-bottom: 5px; /* Space below price */
+}
+
+.game-card button {
+    padding: 5px 12px; /* Button size */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded button corners */
+    background-color: #0288d1; /* Blue background */
+    color: #fff; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    transition: 0.3s; /* Smooth hover effect */
+    font-size: 12px; /* Button text size */
+}
+
+.game-card button:hover {
+    transform: translateY(-3px); /* Lift button slightly on hover */
+    box-shadow: 0 5px 15px rgba(2,136,209,0.5); /* Add shadow effect */
+}
+
+.game-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Lift and slightly enlarge the card */
+    box-shadow: 0 8px 25px rgba(2,136,209,0.6); /* Stronger shadow on hover */
+}
+
+/* ===== Particles / Clouds / Stars ===== */
+.particles, .clouds, .stars {
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    pointer-events: none; z-index:1;
+}
+
+.particles { background:url('particles.png') repeat; opacity:0.4; animation:moveParticles 60s linear infinite; }
+.clouds { background:url('clouds.png') repeat-x; opacity:0.3; animation:moveClouds 120s linear infinite; }
+.stars { background:url('stars.png') repeat; opacity:0.5; animation:twinkleStars 15s linear infinite; }
+
+@keyframes moveParticles { 0%{background-position:0 0;} 100%{background-position:2000px 1000px;} }
+@keyframes moveClouds { 0%{background-position:0 0;} 100%{background-position:2000px 0;} }
+@keyframes twinkleStars { 0%,100%{opacity:0.5;} 50%{opacity:1;} }
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 2vh 0;
+    background-color: #0288d1;
+    color: #e0f7fa;
+    transition: background 6s ease, color 6s ease;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+    .nav-menu ul { flex-direction: column; gap: 10px; } /* Stack menu on small screens */
+    .search-box input { width: 120px; } /* Smaller search box */
+    .hero-btn { padding: 1.5vh 4vw; font-size: 1rem; }
+    .glow-text { font-size: 6vw; }
+    .hero-space p.glow-text { font-size: 3vw; }
+    .game-card { height: 50vh; }
+    .game-card span { font-size: 3vw; padding: 1vh 2vw; }
+    .game-card .price { font-size: 2.5vw; }
+    .game-card button { font-size: 3vw; padding:1vh 4vw;}
+}

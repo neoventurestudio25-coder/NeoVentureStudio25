@@ -1,0 +1,102 @@
+/* ===== Reset & Body ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* إزالة Scroll */
+    background: #0d1117; /* خلفية ليلية ثابتة */
+    position: relative;
+    height: 100vh; /* ارتفاع كامل الشاشة */
+}
+
+/* ===== Hero Section ===== */
+.about-hero {
+    width: 100%;
+    height: 92%; /* يترك مساحة للفوتر */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 2%;
+}
+
+/* Sky Image */
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Studio Logo */
+#studio-logo {
+    font-size: 10vw;
+    color: #0288d1;
+    text-shadow: 0 0 1vw #0288d1, 0 0 2vw #c1ebff, 0 0 3vw #81d4fa;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+    transform: translateY(-10%); /* تحكم بمكان العنوان */
+}
+
+/* About Text */
+#about-text {
+    font-size: 1.5vw;
+    max-width: 80%;
+    line-height: 1.3;
+    color: #ffffff;
+    text-shadow: 0 0 0.5vw #ffffff, 0 0 1vw #ffffff;
+    z-index: 2;
+    position: relative;
+    margin: 2% 0;
+}
+
+/* Canvas for Particles */
+#particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Return Button */
+.return-btn {
+    margin-top: 2%;
+    padding: 1% 3%;
+    background: #0288d1;
+    color: #fff;
+    border-radius: 1%;
+    text-decoration: none;
+    transition: 0.3s, box-shadow 0.5s;
+    font-size: 2vw;
+    z-index: 2;
+    position: relative;
+}
+.return-btn:hover {
+    background: #62cdff;
+    box-shadow: 0 0 1vw #fff, 0 0 2vw #fff, 0 0 3vw #fff;
+}
+
+/* ===== Footer Fully Independent ===== */
+footer {
+    text-align: center;
+    width: 100%;
+    height: 8%; /* تحكم بحرية بنسبة مئوية */
+    position: absolute;
+    bottom: 0; /* ملاصق للأسفل */
+    left: 0; 
+    z-index: 2;
+    color: #fff;
+    background-color: #5d76b6; /* اللون الغامق */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw; /* تحكم بحجم النص */
+}
