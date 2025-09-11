@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".news-card");
 const bgMusic = document.getElementById("bgMusic");
 const soundBtn = document.getElementById("sound-toggle");
-
 soundBtn.addEventListener("click", () => {
   if (bgMusic.paused) {
     bgMusic.play();
@@ -12,7 +11,6 @@ soundBtn.addEventListener("click", () => {
     soundBtn.textContent = "🔇";
   }
 })
-
   cards.forEach((card, i) => {
     card.style.opacity = 0;
     card.style.transform = "translateY(5vh)";
@@ -23,3 +21,4 @@ soundBtn.addEventListener("click", () => {
     }, i * 300);
   });
 });
+
