@@ -14,7 +14,7 @@ body {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:2% 5%;
+    padding:2vh 5vw;
     background:linear-gradient(90deg,#FFA500,#FF6F3C);
     color:#fff;
 }
