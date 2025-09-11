@@ -3,19 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About NeoVentureStudio</title>
+<title>About-NeoVentureStudio</title>
 <link rel="stylesheet" href="AboutUs.css">
+<link rel="icon" type="image/png" href="../NeoVentureLogo.png">
 </head>
 <body>
-
+<header>
+    <div class="studio-bar">
+        <div class="logo">NeoVentureStudio</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../MainPage/Main.html">Games</a></li>
+                <li><a href="../AssetsPage/AssetsPage.html">Assets</a></li>
+                <li><a href="../NewsPage/News.html">News</a></li>
+            </ul>
+        </nav>
+        <button id="sound-toggle" class="sound-btn">🔊</button>
+        <audio id="bgMusic" src="../HollowKnightSong.mp3" loop></audio>
+    </div>
+</header>
 <section class="about-hero">
-    <!-- Night Sky Background -->
-    <img src="SkyNightMoon.png" alt="Night Sky" class="sky night">
-
-    <!-- Studio Logo -->
-    <h1 id="studio-logo">NeoVentureStudio</h1>
-
-    <!-- About Text -->
+    <img src="SkyNightMoon.png" alt="Night Sky" class="sky">
+    <canvas id="particles-canvas"></canvas>
+    <h1 id="studio-logo-text">NeoVentureStudio</h1>
     <p id="about-text">
         NeoVentureStudio is an emerging creative studio committed to exploring the boundaries of digital experiences. 
         Founded with a passion for innovation and a drive to learn, we focus on crafting projects that inspire, engage, 
@@ -28,19 +38,10 @@
         We believe that every idea has the potential to spark something extraordinary, and we are committed to 
         nurturing our vision with integrity, dedication, and a relentless pursuit of excellence.
     </p>
-
-    <!-- Return Button -->
-    <a href="../MainPage/Main.html" class="return-btn">Return to Main Page</a>
-
-    <!-- Particles Canvas -->
-    <canvas id="particles-canvas"></canvas>
 </section>
-
-<!-- Footer -->
 <footer>
     <p>&copy; 2025 NeoVentureStudio. All rights reserved.</p>
 </footer>
-
 <script src="AboutUs.js"></script>
 </body>
 </html>
