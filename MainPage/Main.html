@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoVenture-GameStore</title>
+<link rel="stylesheet" href="Main.css">
+    <!-- Preload sky images to avoid late-loading rectangles during transitions -->
+    <link rel="preload" as="image" href="sky/day/farday.png">
+    <link rel="preload" as="image" href="sky/day/midday.png">
+    <link rel="preload" as="image" href="sky/day/nearday.png">
+    <link rel="preload" as="image" href="sky/night/farnight.png">
+    <link rel="preload" as="image" href="sky/night/midnight.png">
+    <link rel="preload" as="image" href="sky/night/nearnight.png">
+<link rel="icon" type="image/png" href="../NeoVentureLogo.png">
+</head>
+<body>
+<header>
+    <div class="studio-bar">
+        <div class="logo">NeoVentureStudio</div>
+        <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav" class="nav-menu" role="navigation">
+            <ul>
+                <li><a href="../AssetsPage/AssetsPage.html">Assets Store</a></li>
+                <li><a href="../NewsPage/News.html">NeoNews</a></li>
+                <li><a href="../AboutUs/AboutUs.html">About NeoVenture</a></li>
+            </ul>
+        </nav>
+        <div class="studio-controls">
+            <button id="sound-toggle" class="sound-btn" aria-pressed="false">🔊</button>
+            <button id="mode-toggle" class="sound-btn mode-btn" aria-pressed="false" aria-label="Mode: Cycle" title="Mode: Cycle">🔁</button>
+            <audio id="bgMusic" src="../HollowKnightSong.mp3" loop></audio>
+        </div>
+    </div>
+</header>
+<section class="hero-space">
+    <div class="sky-bg">
+        <!-- Day layers: far moves slowest, mid moves medium, near moves fastest -->
+        <img src="sky/day/farday.png" class="sky day far-layer" alt="Far day sky" />
+        <img src="sky/day/midday.png" class="sky day mid-layer" alt="Mid day sky" />
+        <img src="sky/day/nearday.png" class="sky day near-layer" alt="Near day sky" />
+        <!-- Night layers: far moves slowest, mid moves medium, near moves fastest -->
+        <img src="sky/night/farnight.png" class="sky night far-layer" alt="Far night sky" />
+        <img src="sky/night/midnight.png" class="sky night mid-layer" alt="Mid night sky" />
+        <img src="sky/night/nearnight.png" class="sky night near-layer" alt="Near night sky" />
+    </div>
+    <h1 class="glow-text">NeoVentureStudio</h1>
+    <p class="glow-text">ENTER TO YOUR NEW ADVENTURE ! <br> AND PLAY THE IMPOSSIBLE ! </p>
+    <button class="hero-btn" onclick="document.querySelector('#games-grid').scrollIntoView({behavior: 'smooth'})">
+        See our Games
+    </button>
+</section>
+<section id="games-grid" class="games-grid">
+    <div class="game-card" style="background-image:url('game1.png')">
+        <span>Coming Soon</span>
+        <span class="price">FREE</span>
+        <button>DOWNLOAD</button>
+    </div>
+</section>
+<footer>
+    <p>&copy; 2025 NeoVentureStudio. All rights reserved.</p>
+</footer>
+<script src="Main.js"></script>
+</body>
+</html>
+
+
