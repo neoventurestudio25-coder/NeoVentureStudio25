@@ -2,10 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>NeoVentureStudio - Redirecting...</title>
+    <meta name="keywords" content="NeoVenture, NeoVentureStudio, Games Store, Indie Games, Game Assets, NeoNews, Digital Store, Gaming Adventure">
+    <meta name="description" content="Welcome to NeoVentureStudio. Redirecting you to our main adventure hub.">
+    
     <meta http-equiv="refresh" content="0; url=MainPage/Main.html">
-    <title>Redirecting...</title>
+    
+    <style>
+        body {
+            background-color: #000;
+            color: #87ceeb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .loading-text {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #87ceeb; }
+            to { text-shadow: 0 0 20px #87ceeb, 0 0 30px #1a237e; }
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting<a href="../MainPage/Main.html">click here</a>.</p>
+
+    <div class="loading-text">
+        <h1>NeoVentureStudio</h1>
+        <p>Loading your adventure...</p>
+        <p><small>If you are not redirected, <a href="MainPage/Main.html" style="color: #fff;">click here</a>.</small></p>
+    </div>
+
+    <script>
+        // JavaScript fallback redirect
+        window.location.href = "MainPage/Main.html";
+    </script>
 </body>
 </html>
